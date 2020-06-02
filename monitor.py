@@ -5,9 +5,8 @@ import signal
 import sys
 from time import sleep
 
-from icons import (fantom_red_tl, fantom_red_tr, pink_heart,
-                   pink_heart_crossed, red_heart, red_heart_crossed,
-                   red_heart_empty_crossed)
+from icons import (demon, fantom_blue_md, fantom_blue_tl, fantom_red_tl,
+                   fantom_red_tr, pink_heart, red_heart, skull, skull_front)
 from sense_hat import SenseHat
 
 sense = SenseHat()
@@ -23,20 +22,11 @@ signal.signal(signal.SIGTERM, exit_handler)
 
 while True:
     try:
-        sense.set_pixels(pink_heart)
-        sleep(1)
-        sense.set_pixels(pink_heart_crossed)
-        sleep(1)
-
-        sense.set_pixels(red_heart)
-        sleep(1)
-        sense.set_pixels(red_heart_crossed)
-        sleep(1)
-
-        sense.set_pixels(fantom_red_tl)
-        sleep(1)
-        sense.set_pixels(fantom_red_tr)
-        sleep(1)
+        for img in [demon, fantom_red_tl, fantom_red_tr, fantom_blue_tl,
+                    fantom_blue_md, pink_heart, red_heart,
+                    skull, skull_front]:
+            sense.set_pixels(img)
+            sleep(0.8)
 
     except KeyboardInterrupt:
         exit_handler(signal.SIGTERM)

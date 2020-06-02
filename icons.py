@@ -13,7 +13,13 @@ R0 = (255, 0, 0)
 R1 = (150, 0, 0)
 R2 = (50, 0, 0)
 
-B0 = (255, 0, 0)
+G0 = (0, 255, 0)
+G1 = (0, 150, 0)
+G2 = (0, 50, 0)
+
+B0 = (0, 0, 255)
+B1 = (0, 0, 150)
+B2 = (0, 0, 50)
 
 
 def px_choice(pixel_a, pixel_b):
@@ -135,4 +141,59 @@ fantom_red_tr = [
     R0, R0, R0, R0, R0, R0, R1, R2,
     R0, R0, R0, R0, R0, R0, R1, R2,
     R0, XX, R0, R0, XX, R0, R1, R2,
+]
+
+fantom_blue_tl = [
+    XX, XX, XX, XX, XX, XX, XX, XX,
+    XX, XX, B0, B0, B0, B1, XX, XX,
+    XX, B0, B0, B0, B0, B0, B1, XX,
+    B0, B0, XX, W0, B0, XX, W1, B2,
+    B0, B0, W0, W0, B0, W1, W1, B2,
+    B0, B0, B0, B0, B0, B0, B1, B2,
+    B0, B0, B0, B0, B0, B0, B1, B2,
+    B0, XX, B0, B0, XX, B0, B1, B2,
+]
+
+fantom_blue_md = [
+    XX, XX, XX, XX, XX, XX, XX, XX,
+    XX, XX, B0, B0, B0, B1, XX, XX,
+    XX, B0, B0, B0, B0, B0, B1, XX,
+    B0, B0, W0, W0, B0, W1, W1, B2,
+    B0, B0, W0, XX, B0, XX, W1, B2,
+    B0, B0, B0, B0, B0, B0, B1, B2,
+    B0, B0, B0, B0, B0, B0, B1, B2,
+    B0, XX, B0, B0, XX, B0, B1, B2,
+]
+
+skull = [
+    XX, W0, W0, W0, W0, W0, W0, XX,
+    W0, W0, W0, W0, W0, W0, W0, W0,
+    W0, XX, W0, W0, W0, XX, W0, W0,
+    W0, R0, W0, W0, W0, R0, W0, W0,
+    W0, W0, W0, XX, W0, W0, W0, W0,
+    W0, W0, W0, W0, W0, W0, W0, XX,
+    XX, W0, XX, W0, XX, W0, XX, XX,
+    XX, W2, XX, W2, XX, W2, XX, XX,
+]
+
+skull_front = [
+    XX, W2, W0, W0, W0, W0, W2, XX,
+    W2, W0, W0, W0, W0, W0, W0, W2,
+    W0, W0, W0, W0, W0, W0, W0, W0,
+    W2, XX, XX, W0, W0, XX, XX, W2,
+    W2, XX, G0, W0, W0, G0, XX, W2,
+    W0, W0, W0, XX, XX, W0, W0, W0,
+    XX, W0, W0, W0, W0, W0, W0, XX,
+    XX, W0, XX, W0, W0, XX, W0, XX,
+]
+
+demon = [
+    XX, XX, XX, XX, XX, XX, XX, XX,
+    R0, XX, XX, XX, XX, XX, XX, R0,
+    R0, R0, XX, XX, XX, XX, R0, R0,
+    XX, R0, XX, XX, XX, XX, R0, XX,
+    XX, XX, XX, XX, XX, XX, XX, XX,
+    R0, XX, XX, R2, R2, XX, XX, R0,
+    XX, R0, R0, R0, R0, R0, R0, XX,
+    XX, XX, R0, XX, XX, R0, XX, XX,
 ]
