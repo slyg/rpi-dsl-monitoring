@@ -59,7 +59,7 @@ def ping():
 signal.signal(signal.SIGTERM, exit_handler)
 
 # Schedule jobs
-schedule.every(30).seconds.do(ping)
+schedule.every(15).seconds.do(ping)
 ping()
 
 while True:
