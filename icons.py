@@ -181,7 +181,7 @@ skull_front = [
     W2, W0, W0, W0, W0, W0, W0, W2,
     W0, W0, W0, W0, W0, W0, W0, W0,
     W2, XX, XX, W0, W0, XX, XX, W2,
-    W2, XX, G0, W0, W0, G0, XX, W2,
+    W2, XX, R0, W0, W0, R0, XX, W2,
     W0, W0, W0, XX, XX, W0, W0, W0,
     XX, W0, W0, W0, W0, W0, W0, XX,
     XX, W0, XX, W0, W0, XX, W0, XX,

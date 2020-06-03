@@ -1,0 +1,14 @@
+[Unit]
+Description=DSL monitoring service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 -u dsl_monitoring.py
+WorkingDirectory=/home/pi/git/rpi-dsl-monitoring
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
