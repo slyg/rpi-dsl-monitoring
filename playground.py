@@ -6,7 +6,8 @@ import sys
 from time import sleep
 
 from icons import (demon, fantom_blue_md, fantom_blue_tl, fantom_red_tl,
-                   fantom_red_tr, pink_heart, red_heart, skull, skull_front)
+                   fantom_red_tr, pink_heart, red_heart, skull, skull_front,
+                   skull_front_red)
 from sense_hat import SenseHat
 
 sense = SenseHat()
@@ -24,7 +25,7 @@ while True:
     try:
         for img in [demon, fantom_red_tl, fantom_red_tr, fantom_blue_tl,
                     fantom_blue_md, pink_heart, red_heart,
-                    skull, skull_front]:
+                    skull, skull_front, skull_front_red]:
             sense.set_pixels(img)
             sleep(0.8)
 

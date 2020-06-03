@@ -6,10 +6,11 @@ from time import sleep
 
 import schedule
 from colors import blue, cyan, indigo, orange, pink, purple, red, yellow
-from icons import pink_heart, skull_front
+from icons import skull_front
 from sense_hat import SenseHat
 
 sense = SenseHat()
+sense.low_light = True
 sense.set_rotation(270)
 
 
@@ -19,15 +20,16 @@ def exit_handler(signal):
 
 
 def ping():
-    # Display ping in progress
+    sense.clear()
+
+    # Pick random color and line
     y = random.randrange(7)
+    (R, G, B) = random.choice(
+        [blue, cyan, indigo, orange, pink, purple, red, yellow])
+
+    # Display ping start
     for i in range(8):
-        (R, G, B) = random.choice(
-            [blue, cyan, indigo, orange, pink, purple, red, yellow])
         sense.set_pixel(i, y, R, G, B)
-        sleep(0.05)
-    for i in range(8):
-        sense.set_pixel(i, y, 0, 0, 0)
         sleep(0.05)
 
     # Select a random DNS IP
@@ -38,7 +40,14 @@ def ping():
     ]
     ping_ip = random.choice(ping_ips)
 
+    # Ping DNS IP
     response = os.popen(f"ping {ping_ip} -c 1").read()
+
+    # Display ping ended
+    for i in range(8):
+        sense.set_pixel(i, y, 0, 0, 0)
+        sleep(0.05)
+
     if "1 packets transmitted, 1 received, 0% packet loss" in response:
         sense.clear()
     else:
@@ -50,7 +59,8 @@ def ping():
 signal.signal(signal.SIGTERM, exit_handler)
 
 # Schedule jobs
-schedule.every(15).seconds.do(ping)
+schedule.every(30).seconds.do(ping)
+ping()
 
 while True:
     try:

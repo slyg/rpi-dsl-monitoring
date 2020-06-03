@@ -187,6 +187,17 @@ skull_front = [
     XX, W0, XX, W0, W0, XX, W0, XX,
 ]
 
+skull_front_red = [
+    XX, R2, R0, R0, R0, R0, R2, XX,
+    R2, R0, R0, R0, R0, R0, R0, R2,
+    R0, R0, R0, R0, R0, R0, R0, R0,
+    R2, XX, XX, R0, R0, XX, XX, R2,
+    R2, XX, W0, R0, R0, W0, XX, R2,
+    R0, R0, R0, XX, XX, R0, R0, R0,
+    XX, R0, R0, R0, R0, R0, R0, XX,
+    XX, R0, XX, R0, R0, XX, R0, XX,
+]
+
 demon = [
     XX, XX, XX, XX, XX, XX, XX, XX,
     R0, XX, XX, XX, XX, XX, XX, R0,
