@@ -21,6 +21,10 @@ B0 = (0, 0, 255)
 B1 = (0, 0, 150)
 B2 = (0, 0, 50)
 
+Y0 = (255, 255, 0)
+
+OR = (255,165,0)
+
 
 def px_choice(pixel_a, pixel_b):
     '''
@@ -207,4 +211,59 @@ demon = [
     R0, XX, XX, R2, R2, XX, XX, R0,
     XX, R0, R0, R0, R0, R0, R0, XX,
     XX, XX, R0, XX, XX, R0, XX, XX,
+]
+
+bender = [
+    XX, XX, XX, W2, XX, XX, XX, XX,
+    XX, XX, XX, W2, XX, XX, XX, XX,
+    XX, XX, W2, W2, W2, XX, XX, XX,
+    XX, W2, W2, W2, W2, W2, XX, XX,
+    XX, W2, Y0, W2, Y0, W2, XX, XX,
+    XX, W2, W2, W2, W2, W2, XX, XX,
+    XX, XX, Y0, Y0, Y0, XX, XX, XX,
+    XX, XX, Y0, Y0, Y0, XX, XX, XX,
+]
+
+ghost = [
+    XX, XX, XX, XX, XX, XX, XX, XX,
+    XX, XX, XX, W1, W1, XX, XX, XX,
+    XX, XX, W1, W1, W1, W1, XX, XX,
+    XX, XX, R0, W1, R0, W1, XX, XX,
+    W1, XX, W1, W1, W1, W1, XX, W1,
+    XX, W1, W1, XX, XX, W1, W1, XX,
+    XX, XX, W1, W1, W1, W1, XX, XX,
+    XX, XX, W1, W1, W1, W1, XX, XX,
+]
+
+green_ghost = [
+    XX, XX, XX, XX, XX, XX, XX, XX,
+    XX, XX, XX, G0, G0, G0, XX, XX,
+    XX, XX, G0, R0, G0, R0, XX, XX,
+    G0, XX, G0, G0, G0, G0, XX, XX,
+    XX, G0, G0, G0, XX, G0, XX, G0,
+    XX, XX, G0, G0, G0, XX, G0, XX,
+    XX, XX, G0, G0, XX, XX, XX, XX,
+    XX, G0, G0, XX, XX, XX, XX, XX,
+]
+
+pumpkin = [
+    XX, XX, XX, XX, G0, XX, XX, XX,
+    XX, XX, XX, G0, XX, XX, XX, XX,
+    XX, XX, OR, OR, OR, OR, XX, XX,
+    XX, OR, W2, OR, OR, W2, OR, XX,
+    OR, OR, OR, OR, OR, OR, OR, OR,
+    OR, OR, XX, OR, XX, OR, XX, OR,
+    XX, OR, OR, XX, OR, XX, OR, XX,
+    XX, XX, XX, XX, XX, XX, XX, XX,
+]
+
+creeper = [
+    XX, G2, G1, G2, G2, G2, G2, XX,
+    G1, G1, G2, G2, G1, G2, G1, G2,
+    G2, XX, XX, G2, G1, XX, XX, G1,
+    G1, OR, XX, G1, G2, OR, XX, G1,
+    G2, G1, G2, XX, XX, G2, G1, G2,
+    G1, G2, XX, XX, XX, XX, G1, G2,
+    G1, G2, XX, XX, XX, XX, G2, G1,
+    XX, G1, XX, G1, G2, XX, G1, XX,
 ]

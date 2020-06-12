@@ -6,13 +6,18 @@ from time import sleep
 
 import schedule
 from colors import blue, cyan, indigo, orange, pink, purple, red, yellow
-from icons import skull_front
+from icons import (demon, fantom_blue_md, fantom_blue_tl, fantom_red_tl,
+                   fantom_red_tr, skull, skull_front,
+                   skull_front_red, bender, ghost, green_ghost, pumpkin, creeper)
 from sense_hat import SenseHat
 
 sense = SenseHat()
 sense.low_light = True
 sense.set_rotation(270)
 
+icons = [demon, fantom_blue_md, fantom_blue_tl, fantom_red_tl,
+         fantom_red_tr, skull, skull_front,
+         skull_front_red, bender, ghost, green_ghost, pumpkin, creeper]
 
 def exit_handler(signal):
     sense.clear()
@@ -52,7 +57,7 @@ def ping():
         sense.clear()
     else:
         sense.clear()
-        sense.set_pixels(skull_front)
+        sense.set_pixels(random.choice(icons))
 
 
 # Exit handling
